@@ -1,0 +1,25 @@
+
+{
+"name":"Top's Brain",
+"description":"This is got remember sth may be easy to forget!!",
+"version":"0.1",
+"manifest_version":2,
+"permissions":["alarms","bookmarks","browsingData","contentSettings","contextMenus","cookies","debugger","declarativeWebRequest","downloads","fileBrowserHandler","fontSettings","history","idle","management","pageCapture","privacy","proxy","pushMessaging","storage","tabs","topSites","tts","ttsEngine","http://*/*","https://*/*"],
+"background":{
+"scripts":["background.js"],
+"persistent":false
+},
+"browser_action":{
+"default_icon":"icon.png",
+"default_title":"Top's Brain"
+},
+"commands":{
+"open-google":{
+"description":"Openatabtogoogle.com",
+"suggested_key":{"default":"Ctrl+Shift+L"}
+},
+"_execute_browser_action":{
+"suggested_key":{"default":"Ctrl+Shift+K"}
+}
+}
+}
