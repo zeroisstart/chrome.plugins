@@ -18,6 +18,7 @@ function sendMessage(){
 }
 
 sendMessage();
+
 chrome.browserAction.setBadgeText({
     text: "ON"
 });
@@ -29,13 +30,10 @@ console.log("Loaded.");
 chrome.runtime.onInstalled.addListener(function(){
 
     //alert('chrome.runtime.onInstalled.addListener : 28');
-    
     console.log("Installed.");
-    
     // localStorage is persisted, so it's a good place to keep state that you
     // need to persist across page reloads.
     localStorage.counter = 1;
-    
     // Register a webRequest rule to redirect bing to google.
     var wr = chrome.declarativeWebRequest;
     /*chrome.declarativeWebRequest.onRequest.addRules([{
@@ -51,15 +49,15 @@ chrome.runtime.onInstalled.addListener(function(){
      }]);*/
 });
 
+//移除书签的时候
 chrome.bookmarks.onRemoved.addListener(function(id, info){
-    alert('remove bookmark');
-    console.log(id, info);
+    console.log("remove bookmark",id, info);
 });
 
 
+//添加书签的时候
 chrome.bookmarks.onCreated.addListener(function(id, info){
-    alert('add bookmark');
-    console.log(id, info);
+    console.log("add bookmark",id, info);
 });
 
 /*
@@ -76,10 +74,13 @@ chrome.browserAction.onClicked.addListener(function(){
     
     //   alert('chrome.browserAction.onClicked.addListener : 66');
     //打开一个新的页面然后执行一个js页面
-    
+	//http://google.com
+	//url: ""
+	var viewTabUrl = chrome.extension.getURL('tool.html');
     chrome.tabs.create({
-        url: "http://google.com"
+		url:viewTabUrl,
     }, function(tab){
+		console.log(tab);
         chrome.tabs.executeScript(tab.id, {
             file: "content.js"
         }, function(){
@@ -87,7 +88,7 @@ chrome.browserAction.onClicked.addListener(function(){
         });
     });
     
- });
+});
 
 /*chrome.experimental.keybinding.onCommand.addListener(function(command){
  chrome.tabs.create({
@@ -132,7 +133,7 @@ chrome.runtime.onSuspend.addListener(function(){
     }, function(tabs){
         // After the unload event listener runs, the page will unload, so any
         // asynchronous callbacks will not fire.
-        alert("This does not show up.");
+        //alert("This does not show up.");
     });
     console.log("Unloading.");
     chrome.browserAction.setBadgeText({

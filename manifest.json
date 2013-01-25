@@ -4,22 +4,29 @@
 "description":"This is got remember sth may be easy to forget!!",
 "version":"0.1",
 "manifest_version":2,
+//"permissions":["contextMenus"],
 "permissions":["alarms","bookmarks","browsingData","contentSettings","contextMenus","cookies","debugger","declarativeWebRequest","downloads","fileBrowserHandler","fontSettings","history","idle","management","pageCapture","privacy","proxy","pushMessaging","storage","tabs","topSites","tts","ttsEngine","http://*/*","https://*/*"],
 "background":{
-"scripts":["background.js"],
-"persistent":false
+    "scripts":["background.js"],
+    "persistent":false
+},
+"icons":{ 
+    "8":   "images/8.png",
+    "16":  "images/16.png",
+    "48":  "images/48.png",
+    "128": "images/128.png"
 },
 "browser_action":{
-"default_icon":"images/icon.png",
-"default_title":"Top's Brain"
+    "default_icon":"images/32.png",
+    "default_title":"Top's Brain"
 },
 "commands":{
-"open-google":{
-"description":"Openatabtogoogle.com",
-"suggested_key":{"default":"Ctrl+Shift+L"}
-},
-"_execute_browser_action":{
-"suggested_key":{"default":"Ctrl+Shift+K"}
-}
-}
+    "open-google":{
+        "description":"Open a tab to google.com",
+        "suggested_key":{"default":"Ctrl+Shift+L"}
+        },
+    "_execute_browser_action":{
+        "suggested_key":{"default":"Ctrl+Shift+K"}
+        }
+    }
 }
