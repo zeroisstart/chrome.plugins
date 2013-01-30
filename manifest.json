@@ -18,7 +18,8 @@
 },
 "browser_action":{
     "default_icon":"images/32.png",
-    "default_title":"Top's Brain"
+    "default_title":"Top's Brain",
+	 "default_popup": "popup.html"
 },
 "commands":{
     "open-google":{

@@ -67,6 +67,7 @@ chrome.bookmarks.onCreated.addListener(function(id, info){
  alert(id);
  });*/
 //当你点击icon图标的时候
+/*
 chrome.browserAction.onClicked.addListener(function(){
     // The event page will unload after handling this event (assuming nothing
     // else is keeping it awake). The content script will become the main way to
@@ -89,7 +90,7 @@ chrome.browserAction.onClicked.addListener(function(){
     });
     
 });
-
+*/
 /*chrome.experimental.keybinding.onCommand.addListener(function(command){
  chrome.tabs.create({
  url: "http://www.google.com/"
