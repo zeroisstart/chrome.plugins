@@ -17,20 +17,19 @@ function sendMessage(){
     });
 }
 
-sendMessage();
+//sendMessage();
 
 chrome.browserAction.setBadgeText({
     text: "ON"
 });
 
-console.log("Loaded.");
+//console.log("Loaded.");
 
 
 //插件安装的时候触发的函数
 chrome.runtime.onInstalled.addListener(function(){
-
     //alert('chrome.runtime.onInstalled.addListener : 28');
-    console.log("Installed.");
+    //console.log("Installed.");
     // localStorage is persisted, so it's a good place to keep state that you
     // need to persist across page reloads.
     localStorage.counter = 1;
@@ -51,13 +50,12 @@ chrome.runtime.onInstalled.addListener(function(){
 
 //移除书签的时候
 chrome.bookmarks.onRemoved.addListener(function(id, info){
-    console.log("remove bookmark",id, info);
+    console.log("remove bookmark", id, info);
 });
-
 
 //添加书签的时候
 chrome.bookmarks.onCreated.addListener(function(id, info){
-    console.log("add bookmark",id, info);
+    console.log("add bookmark", id, info);
 });
 
 /*
@@ -68,29 +66,29 @@ chrome.bookmarks.onCreated.addListener(function(id, info){
  });*/
 //当你点击icon图标的时候
 /*
-chrome.browserAction.onClicked.addListener(function(){
-    // The event page will unload after handling this event (assuming nothing
-    // else is keeping it awake). The content script will become the main way to
-    // interact with us.
-    
-    //   alert('chrome.browserAction.onClicked.addListener : 66');
-    //打开一个新的页面然后执行一个js页面
-	//http://google.com
-	//url: ""
-	var viewTabUrl = chrome.extension.getURL('tool.html');
-    chrome.tabs.create({
-		url:viewTabUrl,
-    }, function(tab){
-		console.log(tab);
-        chrome.tabs.executeScript(tab.id, {
-            file: "content.js"
-        }, function(){
-            sendMessage();
-        });
-    });
-    
-});
-*/
+ chrome.browserAction.onClicked.addListener(function(){
+ // The event page will unload after handling this event (assuming nothing
+ // else is keeping it awake). The content script will become the main way to
+ // interact with us.
+ 
+ //   alert('chrome.browserAction.onClicked.addListener : 66');
+ //打开一个新的页面然后执行一个js页面
+ //http://google.com
+ //url: ""
+ var viewTabUrl = chrome.extension.getURL('tool.html');
+ chrome.tabs.create({
+ url:viewTabUrl,
+ }, function(tab){
+ console.log(tab);
+ chrome.tabs.executeScript(tab.id, {
+ file: "content.js"
+ }, function(){
+ sendMessage();
+ });
+ });
+ 
+ });
+ */
 /*chrome.experimental.keybinding.onCommand.addListener(function(command){
  chrome.tabs.create({
  url: "http://www.google.com/"
@@ -136,7 +134,7 @@ chrome.runtime.onSuspend.addListener(function(){
         // asynchronous callbacks will not fire.
         //alert("This does not show up.");
     });
-    console.log("Unloading.");
+    //console.log("Unloading.");
     chrome.browserAction.setBadgeText({
         text: ""
     });
