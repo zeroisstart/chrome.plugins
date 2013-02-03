@@ -1,50 +1,70 @@
 body {
-    width: 400px;
-    height: 400px;
+	width: 400px;
+	height: 400px;
 }
 
 #main {
-    width: 400px;
-    height: 400px;
-    border: 1 solid #000000;
+	width: 400px;
+	height: 400px;
+	border: 1 solid #000000;
 }
 
 .margin-top-20 {
-    margin-top: 20px;
+	margin-top: 20px;
 }
 
 #main-nav h1 {
+	
 }
 
 .main-panel {
-    height: 80px;
-    width: 360px;
-    padding-left: 20px;
-    clear: both;
+	height: 80px;
+	width: 360px;
+	padding-left: 20px;
+	clear: both;
 }
 
 .main-panel ul {
-    width: 360px;
-    text-align: center;
+	width: 360px;
+	text-align: center;
 }
 
 .main-panel ul li {
-    float: left;
-    text-align: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 4px;
-    border: 1px solid #aaa;
-    margin-right: 13px;
-    line-height: 40px;
+	float: left;
+	text-align: center;
+	width: 75px;
+	height: 40px;
+	border-radius: 4px;
+	border: 1px solid #aaa;
+	margin-left: 10px;
+	line-height: 40px;
 }
 
 .main-panel ul li a {
-    display: block;
-    text-decoration: none;
-    color: #222;
+	display: block;
+	text-decoration: none;
+	color: #222;
 }
 
 .main-panel ul li a:hover {
-    background: #eee;
+	background: #eee;
+}
+
+.home {
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+}
+
+.home a {
+	display: block;
+	text-decoration: none;
+	width: 110px;
+	line-height: 60px;
+	width: 110px;
+}
+
+.tool-frame {
+	display: none;
+	width: 360px;
 }
