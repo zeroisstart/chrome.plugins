@@ -5,7 +5,8 @@
 "version":"0.1",
 "manifest_version":2,
 //"permissions":["contextMenus"],
-"permissions":["alarms","bookmarks","browsingData","contentSettings","contextMenus","cookies","debugger","declarativeWebRequest","downloads","fileBrowserHandler","fontSettings","history","idle","management","pageCapture","privacy","proxy","pushMessaging","storage","tabs","topSites","tts","ttsEngine","http://*/*","https://*/*"],
+//"alarms","bookmarks","browsingData","cookies","debugger","downloads","management","tabs",
+"permissions":["browsingData","http://*/*","https://*/*"],
 //"content_security_policy": "script-src 'self'; object-src 'self'",
 "background":{
     "scripts":["background.js"],
