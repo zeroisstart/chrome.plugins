@@ -1,11 +1,11 @@
 body {
-	width: 400px;
-	height: 400px;
+	width: 410px;
+	height: 410px;
 }
 
 #main {
-	width: 400px;
-	height: 400px;
+	width: 420px;
+	height: 410px;
 	border: 1 solid #000000;
 }
 
@@ -68,3 +68,5 @@ body {
 	display: none;
 	width: 360px;
 }
+
+.sub_nav a{font-size: 17px;}
