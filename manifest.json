@@ -6,8 +6,8 @@
 "manifest_version":2,
 //"permissions":["contextMenus"],
 //"alarms","bookmarks","browsingData","cookies","debugger","downloads","management","tabs",
-"permissions":["browsingData","http://*/*","https://*/*"],
-//"content_security_policy": "script-src 'self'; object-src 'self'",
+"permissions":["browsingData","tabs","bookmarks","browsingData","cookies","debugger","downloads","management","http://*/*","https://*/*"],
+"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
 "background":{
     "scripts":["background.js"],
     "persistent":false
